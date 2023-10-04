@@ -3,6 +3,8 @@ import { HomePageComponent } from './home/pages/home-page/home-page.component';
 
 export const routes: Routes = [
   {
-    path:'', component:HomePageComponent, loadChildren:()=>import('./home/home.routes').then(r=>r.routes)
+    path:'',
+    component:HomePageComponent,
+    loadChildren:()=>import('./home/home.routes').then(r=>r.routes)
   }
 ];
