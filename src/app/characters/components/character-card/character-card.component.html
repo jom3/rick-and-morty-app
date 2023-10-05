@@ -1,0 +1,8 @@
+<h1 class="text-center text-white text-2xl mt-5">{{character.name}}</h1>
+<h4 class="text-center uppercase m-2" [ngClass]="{'text-red-400':character.status=='Dead','text-green-400':character.status=='Alive','text-gray-400':character.status=='unknown'}">{{character.status}}</h4>
+<img src={{character.image}} alt={{character.name}} class="rounded-xl w-full object-cover">
+<h4 class="mt-5 text-gray-300 text-xl">Location: <span class="text-cyan-300">{{character.location.name}}</span></h4>
+<h4 class="text-gray-300 text-xl">Origin: <span class="text-cyan-300">{{character.origin.name}}</span></h4>
+<h4 class="text-gray-300 text-xl">Species: <span class="text-cyan-300">{{character.species}}</span></h4>
+<h3 class="text-gray-300 text-xl">Gender: <span class="text-cyan-300">{{character.gender}}</span></h3>
+<h4 class="text-gray-300 text-xl">Created: <span class="text-cyan-300">{{character.created | date}}</span></h4>
