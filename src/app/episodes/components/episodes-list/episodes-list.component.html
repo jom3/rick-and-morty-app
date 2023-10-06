@@ -1,0 +1,5 @@
+<div class="w-full h-full flex flex-row flex-wrap gap-5 p-5 justify-center items-center">
+  <div class="sm:w-full md:w-[80%] lg:w-[45%] xl:w-[30%] bg-[#172A3A] p-2 rounded-xl flex flex-col justify-center" *ngFor="let epi of episodes">
+    <app-episode-card [episode]="epi"/>
+  </div>
+</div>
