@@ -1,1 +1,8 @@
-<p>locations-page works!</p>
+<div class="w-full h-full p-2 flex flex-col justify-center items-center">
+  <app-locations-list [locations]="locations()"/>
+  <div class="mt-5 flex flex-row text-white gap-5 items-center">
+    <button class="bg-blue-800 text-white uppercase p-2 rounded-lg" [disabled]="currentPage()==1" [ngClass]="{'bg-gray-500': currentPage()==1}" (click)=" changeCurrentPage(-1)">prev</button>
+      <p>page {{currentPage()}} of {{pageData().pages}}</p>
+    <button class="bg-blue-800 text-white uppercase p-2 rounded-lg" [disabled]="currentPage()==pageData().pages" [ngClass]="{'bg-gray-500': currentPage()==pageData().pages}" (click)=" changeCurrentPage(+1)">next</button>
+  </div>
+</div>
