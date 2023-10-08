@@ -1,0 +1,10 @@
+<div class="w-auto max-h-[600px] min-h-[450px]">
+<h1 class="text-center text-white text-2xl mt-5">{{location.name}}</h1>
+<h1 class="text-gray-300 text-xl my-2">{{location.residents.length!=0? 'Residents:':'Residents information no available'}}</h1>
+<div class="w-full flex flex-row flex-wrap justify-center items-center gap-1 overflow-y-scroll max-h-[250px]">
+  <img src={{getImage(loc)}} alt={{location.name}} class="w-20 h-20" *ngFor="let loc of location.residents">
+</div>
+<h4 class="mt-5 text-gray-300 text-xl">Dimension: <span class="text-cyan-300">{{location.dimension}}</span></h4>
+<h4 class="text-gray-300 text-xl">Type: <span class="text-cyan-300">{{location.type}}</span></h4>
+<h4 class="text-gray-300 text-xl">Created: <span class="text-cyan-300">{{location.created | date}}</span></h4>
+</div>
