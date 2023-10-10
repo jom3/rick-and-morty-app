@@ -43,6 +43,7 @@ export class CharactersPageComponent implements OnInit{
   changeCurrentPage(value:number){
     this.currentPage.set(this.currentPage()+value)
     this.isLoading.set(true)
+    window.scrollTo(0,0)
     this.getAllCharacters()
   }
 

@@ -39,6 +39,7 @@ export class EpisodesPageComponent {
 
   changeCurrentPage(value:number){
     this.currentPage.set(this.currentPage()+value)
+    window.scrollTo(0,0)
     this.getAllEpisodes()
   }
 
