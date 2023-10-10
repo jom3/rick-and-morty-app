@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Location } from '../../interfaces/locations-response.interface';
 
 @Component({
   selector: 'app-location-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './location-card.component.html',
   styleUrls: ['./location-card.component.css']
 })

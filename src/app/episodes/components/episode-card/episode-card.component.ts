@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Episode } from '../../interfaces/episodes-response.interface';
 
 @Component({
   selector: 'app-episode-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './episode-card.component.html',
   styleUrls: ['./episode-card.component.css']
 })
