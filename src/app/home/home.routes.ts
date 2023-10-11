@@ -10,4 +10,7 @@ export const routes: Routes = [
   {
     path:'', loadChildren:()=>import('../locations/locations.routes').then(r=>r.routes)
   },
+  {
+    path:'', loadChildren:()=>import('../search/search.routes').then(r=>r.routes)
+  },
 ];
