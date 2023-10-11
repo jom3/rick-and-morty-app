@@ -32,7 +32,7 @@ export class CharactersPageComponent implements OnInit{
         this.characters.set(r.results)
       },
       error:e=>{
-        console.log(e) //* #FIXME: agregar cuando haya un componente para el error
+        (e) //* #FIXME: agregar cuando haya un componente para el error
       },
       complete:()=>{
         this.isLoading.set(false)

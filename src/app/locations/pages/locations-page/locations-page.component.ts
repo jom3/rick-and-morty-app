@@ -26,12 +26,12 @@ export class LocationsPageComponent implements OnInit{
   getAllLocations(){
     this.locationService.getAllLocations(this.currentPage()).subscribe({
       next:r=>{
-        console.log(r.results)
+        (r.results)
         this.pageData.set(r.info)
         this.locations.set(r.results)
       },
       error:e=>{
-        console.log(e) //* #FIXME: agregar cuando haya un componente para el error
+        (e) //* #FIXME: agregar cuando haya un componente para el error
       },
     })
   }
