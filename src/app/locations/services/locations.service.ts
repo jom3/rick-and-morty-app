@@ -15,8 +15,8 @@ export class LocationsService {
     private http:HttpClient
   ){}
 
-  getAllLocations(page:number=1):Observable<LocationsResponse>{
-    return this.http.get<LocationsResponse>(`${this.baseUrl}/location/?page=${page}`)
+  getAllLocations(page:number=1, name:string=''):Observable<LocationsResponse>{
+    return this.http.get<LocationsResponse>(`${this.baseUrl}/location/?page=${page}&name=${name}`)
   }
 
 }

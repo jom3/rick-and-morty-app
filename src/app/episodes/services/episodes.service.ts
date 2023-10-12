@@ -14,7 +14,7 @@ export class EpisodesService {
     private http:HttpClient
   ){}
 
-  getAllEpisodes(page:number=1):Observable<EpisodesResponse>{
-    return this.http.get<EpisodesResponse>(`${this.baseUrl}/episode?page=${page}`)
+  getAllEpisodes(page:number=1, name:string=''):Observable<EpisodesResponse>{
+    return this.http.get<EpisodesResponse>(`${this.baseUrl}/episode?page=${page}&name=${name}`)
   }
 }

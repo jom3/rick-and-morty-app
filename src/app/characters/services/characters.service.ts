@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable} from 'rxjs';
 import { environment } from 'src/environments/environment.development';
-import { Character, CharactersResponse } from '../interfaces/characters-response.interface';
+import { CharactersResponse } from '../interfaces/characters-response.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ export class CharactersService {
     private http:HttpClient
   ){}
 
-  getAllCharacters(page:number=1):Observable<CharactersResponse>{
-    return this.http.get<CharactersResponse>(`${this.baseUrl}/character/?page=${page}`)
+  getAllCharacters(page:number=1, name:string=''):Observable<CharactersResponse>{
+    return this.http.get<CharactersResponse>(`${this.baseUrl}/character/?page=${page}&name=${name}`)
   }
 
 }
