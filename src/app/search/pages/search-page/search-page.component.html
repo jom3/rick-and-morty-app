@@ -1,1 +1,34 @@
-<p>search-page works!</p>
+<div class="w-full h-auto flex-col sm:flex-col lg:flex-row gap-5 p-5 justify-between items-start flex">
+  <section class="bg-[#172A3A] min-w-[300px] p-5">
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="w-full flex flex-col gap-5 justify-center">
+      <h1 class="text-xl text-white text-center">Insert a search</h1>
+      <hr class="bg-white border-white w-full">
+      <input type="text" name="" id="" class="w-full p-2 rounded outline-none" formControlName="search">
+      <h1 class="text-xl text-white text-center">Choose almost one</h1>
+      <hr class="bg-white border-white w-full">
+      <div class="flex flex-row gap-5">
+        <input type="radio" name="options" value="episodes" id="episodes" class="w-5" formControlName="options">
+        <label for="episodes" class="text-white uppercase font-semibold">Episodes</label>
+      </div>
+      <div class="flex flex-row gap-5">
+        <input type="radio" name="options" value="characters" id="characters" formControlName="options" class="w-5">
+        <label for="characters" class="text-white uppercase font-semibold">Characters</label>
+      </div>
+      <div class="flex flex-row gap-5">
+        <input type="radio" name="options" value="locations" id="locations" formControlName="options" class="w-5">
+        <label for="locations" class="text-white uppercase font-semibold">Locations</label>
+      </div>
+    <hr class="bg-white border-white w-full">
+    <button type="submit" class="w-full p-2 bg-blue-500 text-white font-bold uppercase rounded-full">Search</button>
+  </form>
+  </section>
+  <section class="w-full h-full rounded p-5" [hidden]="currentSearch()==''">
+    <h1 class="text-5xl text-center text-white font-semibold uppercase mb-2">Results</h1>
+    <hr class="bg-white border-white w-full">
+ <div class="w-full h-full p-2 flex flex-col justify-center items-center">
+      <app-characters-list [characters]="results()" *ngIf="currentSearch()=='characters'" />
+      <app-episodes-list [episodes]="results()" *ngIf="currentSearch()=='episodes'" />
+      <app-locations-list [locations]="results()" *ngIf="currentSearch()=='locations'" />
+    </div>
+</section>
+</div>
