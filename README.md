@@ -1,27 +1,35 @@
-# RickAndMortyApp
+# Rick and Morty Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+This project is a less module angular project was made for practice
 
-## Development server
+[![Static Badge](https://img.shields.io/badge/Angular-crimson?logo=Angular)](https://angular.io/)
+[![Static Badge](https://img.shields.io/badge/JavaScript-crimson?logo=JavaScript)](https://www.javascript.com/)
+[![Static Badge](https://img.shields.io/badge/TypeScript-white?logo=TypeScript)](https://www.typescriptlang.org/)
+[![Static Badge](https://img.shields.io/badge/HTML5-yellow?logo=HTML5)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![Static Badge](https://img.shields.io/badge/CSS3-blue?logo=CSS3)](https://developer.mozilla.org/es/docs/Web/CSS)
+[![Static Badge](https://img.shields.io/badge/Tailwind%20CSS-crimson?logo=Tailwind%20CSS)](https://tailwindcss.com/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The angular version is 16.2.2.
 
-## Code scaffolding
+## Project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This application is applying a new form that some people recommend to work with angular, this application is really different because it works only with standalone components.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Information
 
-## Running unit tests
+This application use rick and morty API just for get data and works with it.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+If you want to use this application you need to follow the next steps to run it:
 
-## Running end-to-end tests
+- change the name file from **environment.ts** to **environment.development.ts**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- add in that file the next line **baseUrl**
 
-## Further help
+ --> ``https://rickandmortyapi.com/api`` <--
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Github profile
+
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jom3)
+
+If you like this app, you can give me a star in this repository, thanks!
